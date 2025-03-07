@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<button class="addNumber">Add number</button>
+	
+	<section class="numbers">
+		<ul>
+			<!-- <li class="num"></li>
+			<li class="fatNum"></li> -->
+		</ul>
+	</section>
+
+	<script>
+		const addNumber = document.querySelector('.addNumber');
+		let count = 1;
+
+		addNumber.addEventListener('click', function() {
+				const numbers = document.querySelector('.numbers');
+				const num = document.createElement('li');
+
+				if(count % 3 === 0) num.classList.add('fatNum');
+				else num.classList.add('num');
+				
+				num.textContent = count;
+				numbers.appendChild(num);
+				count += 2;
+		});
+
+	</script>
+</body>
+</html>
