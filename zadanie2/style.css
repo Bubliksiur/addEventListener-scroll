@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10000vh;
+}
+
+div {
+	background-color: #000000;
+	width: 200px;
+	height: 200px;
+
+	/* position: absolute; bedzie pozycjonowany wzgledem jakiegos znacznika ktory ma position: relative; jesli takiego nie bedzie to bedzie pozycjnowany wzgledem body! */
+
+	/* ----Wycentrowanie za pomoca position absolute---- */
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	transition: width 0.1s, height 0.1s;
+	color: rgb(255, 255, 255);
+	font-size: 24px;
+
+}

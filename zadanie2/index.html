@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<!-- <div class="container">
+		<div class="square">
+			<h1 class="txt">Scroll!</h1>
+		</div>
+	</div> -->
+
+	<script>
+		const square = document.createElement('div');
+		const txt = document.createElement('h1');
+		let size = 100;
+		let grow = true; // mowi kiedy ma byc stop i czy ma wartosc rosnac czy malec
+		document.body.appendChild(square);
+		document.body.appendChild(txt);
+		txt.textContent = 'Scroll!';
+
+		window.addEventListener('scroll', () => {
+			square.style.width = `${size}px`;
+			square.style.height = `${size}px`;
+			txt.style.width = `${size}px`;
+			txt.style.height = `${size}px`;
+
+			if (size >= (window.innerWidth / 2)) {
+				grow = !grow;
+			}
+			else if (size < 0) {
+				grow = !grow;
+			}
+
+			if (grow) {
+				size += 5;
+			}
+			else {
+				size -= 5;
+			}
+		})
+	</script>
+</body>
+
+</html>
