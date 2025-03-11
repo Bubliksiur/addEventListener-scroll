@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+<!-- <section>
+	<div></div>
+</section> -->
+	
+	<script>
+		const square = document.createElement('div');
+		let size = 100;
+		let grow = true;
+		document.body.appendChild(square);
+		window.addEventListener('scroll', () => {
+			square.style.height = `${size}px`;
+			if(size >= (window.innerHeight)) {
+				grow = !grow;
+			} 
+			else if(size < 0) {
+				grow = !grow;
+			}
+			
+			if(grow) {
+				size += 10;
+			}
+			else {
+				size -=10;
+			}
+		})
+	</script>
+</body>
+</html>
